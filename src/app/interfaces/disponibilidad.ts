@@ -6,6 +6,3 @@ export interface disponibilidad {
     ciudad: string;
 
 }
-export interface comentario{
-    comenta: string;
-}
