@@ -18,7 +18,7 @@
   </div>
 </nav>
 <section>
-  <div class="container">
+  <div class="container mt-5">
     <div class="row align-items-start">
       <div class="col">
         <img src="https://i.linio.com/p/9ad6559e042119683b6180eef862569c-product.jpg" alt="">
@@ -29,7 +29,7 @@
         <p><del>S/ 69.90  </del>  -21% </p>
         <p>MARCA <u> fUNKO</u></p>
         <h3 class="precio__funko"> s/ 54.00 </h3>
-        <p>Acumula hasta 54 CMR Puntos</p>
+        <p class="bono">Acumula hasta 54 CMR Puntos</p>
 
        
           <div class="delivery_seccion border border-success">
@@ -44,14 +44,14 @@
             </div>
   
           </div>
-          <button type="button" class="btn btn-info btn-lg">Añadir a carrito</button>
+          <button type="button" class="btn btn-info btn-lg mt-3">Añadir a carrito</button>
 
 
       </div>
 
     </div>
   </div>
-  <div class="container">
+  <div class="container mt-5">
     <div class="row align-items-start">
   <div class="col card">
     <div class="card-header">
@@ -72,10 +72,10 @@
   </div>
 </div>
 </div>
-
-</section>
+</section >
 
 <section>
+  <div class="container mt-5">
   <table class="table">
     <thead>
       <tr>
@@ -114,12 +114,13 @@
       </tr>
     </tbody>
   </table>
+</div>
   
 </section>
 <section>
 <footer class="bg-dark text-center text-white">
   
-  <div class="container p-4">
+  <div class="container p-4 mt-5">
     <!-- Section: Social media -->
     
     <!-- Section: Social media -->
@@ -139,15 +140,14 @@
           <div class="col-md-5 col-12">
             
             <div class="form-outline form-white mb-4">
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [value]="comen.comenta" (keyup)="onChange($event)"/>
+              <input class="form-control" id="exampleInputopinion" aria-describedby="emailHelp" [(ngModel)]="comentari.opinion" [ngModelOptions]="{standalone: true}"/>
               
             </div>
           </div>
           
           <div class="col-auto">
             
-            <button type="submit" class="btn btn-outline-light mb-4" (click)="onDatos2">
-              Enviar
+            <button  class="btn btn-outline-light mb-4" (click)="onDatos()">Enviar
             </button>
           </div>
           

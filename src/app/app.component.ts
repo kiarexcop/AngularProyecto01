@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { comentario, disponibilidad } from './interfaces/disponibilidad';
-
+import { comentario } from './interfaces/comentario';
+import {  disponibilidad } from './interfaces/disponibilidad';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -31,30 +31,47 @@ export class AppComponent {
     direccion: "ovalo rimac 456",
     ciudad: "lima"
   };
+
+  
+
+  public comentari:comentario=this.comentarioVacio();
+  public comentas: comentario[]=[];
+
+  
+
+
+  comentarioVacio():comentario{
+    return{
+      opinion: ""
+
+    }
+  };
   onDatos():void{
     /*console.log(this.pro01)
     console.log(this.pro02)
     console.log(this.pro03)*/
+
     this.producto.push(this.pro01)
     this.producto.push(this.pro02)
     this.producto.push(this.pro03)
+
+    console.log(this.comentari)
+    this.comentas.push(this.comentari);
+    this.comentari = this.comentarioVacio();
+
   }
   /*onGUardar():void{
     console.log("metodo onGUardar() invocado");
 
   }*/
 
-  public comen:comentario={
-    comenta:""
-
-  }
-  onDatos2():void{
-    console.log(this.comen)
-
-  }
-  onChange(event: Event){
+  
+  /*onDatos2():void{
+    
+  }*/
+  /*onChange(event: Event){
     const elemento = event.target as HTMLInputElement;
     this.comen.comenta = elemento.value;
 
-  }
+  }*/
 }
